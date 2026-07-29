@@ -1,123 +1,158 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoGuide - Roblox Rehber Merkezi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #111827;
-            color: white;
-            text-align: center;
-            margin: 0;
-        }
+<title>RoGuide - Roblox Haber Merkezi</title>
 
-        header {
-            background: #2563eb;
-            padding: 25px;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-        h1 {
-            font-size: 40px;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b1220;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
 
-        .kart {
-            background: #1f2937;
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 15px;
-        }
+header {
+    background: #2563eb;
+    padding: 30px;
+}
 
-        button {
-            background: #facc15;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+.logo {
+    width: 180px;
+    margin-bottom: 10px;
+}
 
-        button:hover {
-            background: #fde047;
-        }
+header p {
+    font-size: 18px;
+}
 
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            background: #0f172a;
-            color: #aaa;
-        }
-    </style>
+.kart {
+    background: #172033;
+    margin: 25px auto;
+    padding: 25px;
+    width: 85%;
+    max-width: 550px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #0005;
+}
+
+.kart h2 {
+    color: #60a5fa;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #080d18;
+    color: #aaa;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>🎮 RoGuide</h1>
-    <p>Roblox Dünyasının Rehber Merkezi</p>
+
+<img src="roguide.png" class="logo">
+
+<p>Roblox Haberleri ve Önemli Bilgiler</p>
+
 </header>
 
 
 <div class="kart">
-    <h2>💰 Robux Hesaplama</h2>
-    <p>En uygun Robux fiyatlarını ve hesaplamaları keşfet.</p>
-    <button>Yakında</button>
+
+<h2>Robux Fiyatları</h2>
+
+<p>Güncel Robux paketlerini görüntüle.</p>
+
+<a href="robux.html">
+<button>Fiyatlara Bak</button>
+</a>
+
 </div>
 
 
 <div class="kart">
-    <h2>📚 Roblox Rehberleri</h2>
-    <p>Popüler Roblox oyunları için rehberler.</p>
-    <button>Yakında</button>
+
+<h2>Roblox Türkiye Durumu</h2>
+
+<p>Roblox'un Türkiye'de kapalı olduğu süre:</p>
+
+<h1 id="gunSayisi">Hesaplanıyor...</h1>
+
+<p>gündür</p>
+
 </div>
 
 
 <div class="kart">
-    <h2>📰 Roblox Haberleri</h2>
-    <p>Yeni güncellemeler ve önemli bilgiler.</p>
-    <button>Yakında</button>
+
+<h2>Son Roblox Haberleri</h2>
+
+<p>Yakında önemli Roblox haberleri burada yayınlanacak.</p>
+
+<button>Yakında</button>
+
+</div>
+
+
+<div class="kart">
+
+<h2>Güvenlik Uyarıları</h2>
+
+<p>Dolandırıcılık ve hesap güvenliği haberleri.</p>
+
+<button>Yakında</button>
+
 </div>
 
 
 <footer>
-    Bu Bir Beta Sürümüdür. Hatalar Olabilir.
+
+Bu Bir Beta Sürümüdür. Hatalar Olabilir.
+
 </footer>
-
-</body>
-</html>
-
-<div class="kart">
-    <h2>💰 Robux Fiyatları</h2>
-    <p>Güncel Robux paketlerini görüntüle.</p>
-    <a href="robux.html">
-        <button>Fiyatlara Bak</button>
-    </a>
-</div>
-
-<div class="kart">
-    <h2>📅 Roblox Türkiye Durumu</h2>
-    <p>Roblox'un Türkiye'de kapalı olduğu süre:</p>
-
-    <h1 id="gunSayisi">Hesaplanıyor...</h1>
-    <p>gündür</p>
-</div>
 
 
 <script>
-    // Roblox Türkiye erişim engeli başlangıç tarihi
-    const baslangicTarihi = new Date("2024-08-07");
 
-    // Bugünün tarihi
-    const bugun = new Date();
+const baslangicTarihi = new Date("2024-08-07");
 
-    // Gün farkını hesapla
-    const fark = bugun - baslangicTarihi;
+const bugun = new Date();
 
-    const gun = Math.floor(fark / (1000 * 60 * 60 * 24));
+const fark = bugun - baslangicTarihi;
 
-    document.getElementById("gunSayisi").innerHTML = gun;
+const gun = Math.floor(fark / (1000 * 60 * 60 * 24));
+
+document.getElementById("gunSayisi").innerHTML = gun;
+
 </script>
+
+
+</body>
+</html>
