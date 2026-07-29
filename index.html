@@ -97,3 +97,27 @@
         <button>Fiyatlara Bak</button>
     </a>
 </div>
+
+<div class="kart">
+    <h2>📅 Roblox Türkiye Durumu</h2>
+    <p>Roblox'un Türkiye'de kapalı olduğu süre:</p>
+
+    <h1 id="gunSayisi">Hesaplanıyor...</h1>
+    <p>gündür</p>
+</div>
+
+
+<script>
+    // Roblox Türkiye erişim engeli başlangıç tarihi
+    const baslangicTarihi = new Date("2024-08-07");
+
+    // Bugünün tarihi
+    const bugun = new Date();
+
+    // Gün farkını hesapla
+    const fark = bugun - baslangicTarihi;
+
+    const gun = Math.floor(fark / (1000 * 60 * 60 * 24));
+
+    document.getElementById("gunSayisi").innerHTML = gun;
+</script>
