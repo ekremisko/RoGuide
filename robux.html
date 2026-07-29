@@ -1,118 +1,45 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RoGuide - Robux Fiyatları</title>
-
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #0b1220;
-    color: white;
-    text-align: center;
-    margin: 0;
-}
-
-
-header {
-    background: #2563eb;
-    padding: 25px;
-}
-
-
-.logo {
-    width: 150px;
-}
-
-
-.kart {
-    background: #172033;
-    margin: 25px auto;
-    padding: 25px;
-    width: 85%;
-    max-width: 500px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px #0005;
-}
-
-
-.kart h2 {
-    color: #60a5fa;
-}
-
-
-button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-
-button:hover {
-    background: #1d4ed8;
-}
-
-
-a {
-    text-decoration: none;
-}
-
-
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: #080d18;
-    color: #aaa;
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<img src="roguide.png" class="logo">
-
-<h1>Robux Fiyatları</h1>
-
-<p>Güncel Robux paket bilgileri</p>
-
-</header>
-
-
-
 <div class="kart">
+    <h2>Robux Fiyatları</h2>
 
-<h2>100 Robux</h2>
-
-<p>0.99 Dolar</p>
+    <p id="fiyat80"></p>
+    <p id="fiyat100"></p>
+    <p id="fiyat400"></p>
+    <p id="fiyat1000"></p>
+    <p id="fiyat2000"></p>
+    <p id="fiyat5000"></p>
+    <p id="fiyat10000"></p>
 
 </div>
 
 
+<script>
 
-<div class="kart">
-
-<h2>400 Robux</h2>
-
-<p>4.99 Dolar</p>
-
-</div>
+const robuxTL = 1.50;
+const dolarKuru = 40;
 
 
+function hesapla(robux) {
 
-<div class="kart
+    let tl = robux * robuxTL;
+    let dolar = tl / dolarKuru;
+
+    return `
+    <strong>${robux} Robux</strong><br>
+    ${tl.toFixed(2)} TL<br>
+    ${dolar.toFixed(2)} Dolar
+    <hr>
+    `;
+
+}
+
+
+document.getElementById("fiyat80").innerHTML = hesapla(80);
+document.getElementById("fiyat100").innerHTML = hesapla(100);
+document.getElementById("fiyat400").innerHTML = hesapla(400);
+document.getElementById("fiyat1000").innerHTML = hesapla(1000);
+document.getElementById("fiyat2000").innerHTML = hesapla(2000);
+document.getElementById("fiyat5000").innerHTML = hesapla(5000);
+document.getElementById("fiyat10000").innerHTML = hesapla(10000);
+
+</script>
+
