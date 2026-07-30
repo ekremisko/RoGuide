@@ -12,78 +12,153 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+*{
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    background:#080f1f;
-    color:white;
-    font-family:'Poppins',sans-serif;
-    text-align:center;
+margin:0;
+background:#080f1f;
+color:white;
+font-family:'Poppins',sans-serif;
+text-align:center;
 }
 
 
+/* Loading */
+
+#loading{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#080f1f;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+
+}
+
+
+.loader{
+
+width:55px;
+height:55px;
+border:5px solid #26334f;
+border-top:5px solid #2563eb;
+border-radius:50%;
+animation:dondur 1s linear infinite;
+
+}
+
+
+@keyframes dondur{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+
+
+/* Menü */
+
 nav{
-    background:#111c33;
-    padding:15px;
+
+background:#111c33;
+padding:18px;
+position:sticky;
+top:0;
+
 }
 
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:10px;
-    font-weight:bold;
+
+color:white;
+text-decoration:none;
+margin:8px;
+font-weight:600;
+font-size:14px;
+
 }
 
 
+
+/* Header */
+
 header{
-    padding:30px;
-    background:linear-gradient(180deg,#2563eb,#080f1f);
+
+padding:35px 20px;
+background:linear-gradient(180deg,#2563eb,#080f1f);
+
 }
 
 
 .logo{
-    width:160px;
+
+width:160px;
+border-radius:20px;
+
 }
 
 
+.badge{
+
+display:inline-block;
+background:#2563eb;
+padding:6px 15px;
+border-radius:20px;
+
+}
+
+
+
+/* Kart */
+
 .kart{
 
-    background:#111c33;
-    width:85%;
-    max-width:500px;
-    margin:25px auto;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 0 20px #000;
+background:#111c33;
+width:85%;
+max-width:550px;
+margin:25px auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px #0008;
+transition:.3s;
+
+}
+
+
+.kart:hover{
+
+transform:translateY(-5px);
 
 }
 
 
 .kart h2{
-    color:#60a5fa;
-}
 
-
-button{
-
-    background:#2563eb;
-    color:white;
-    border:0;
-    padding:12px 25px;
-    border-radius:10px;
-    cursor:pointer;
+color:#60a5fa;
 
 }
+
 
 
 footer{
 
-    margin-top:40px;
-    background:#050914;
-    padding:20px;
-    color:#aaa;
+margin-top:40px;
+background:#050914;
+padding:25px;
+color:#aaa;
 
 }
+
 
 </style>
 
@@ -93,6 +168,20 @@ footer{
 <body>
 
 
+<div id="loading">
+
+<img src="roguide.jpg" width="120">
+
+<h2>Loading...</h2>
+
+<div class="loader"></div>
+
+<p>RoGuide v0.2.0 Beta</p>
+
+</div>
+
+
+
 <nav>
 
 <a href="index.html">🏠 Ana Sayfa</a>
@@ -100,6 +189,8 @@ footer{
 <a href="robux.html">💰 Robux</a>
 
 <a href="gamepass.html">🎟️ Game Pass</a>
+
+<a href="haftanin-oyunlari.html">🎮 Haftanın Oyunları</a>
 
 </nav>
 
@@ -113,6 +204,8 @@ footer{
 
 <p>Popüler Roblox oyunlarının Game Pass değerleri</p>
 
+<span class="badge">v0.2.0 BETA</span>
+
 </header>
 
 
@@ -120,28 +213,13 @@ footer{
 
 <div class="kart">
 
-<h2>Brookhaven</h2>
+<h2>🏠 Brookhaven</h2>
 
-<p>Premium - 275 Robux</p>
+<p>⭐ Premium - 275 Robux</p>
 
-<p>Radio - 199 Robux</p>
+<p>📻 Radio - 199 Robux</p>
 
-<p>Speed - 199 Robux</p>
-
-</div>
-
-
-
-
-<div class="kart">
-
-<h2>Blox Fruits</h2>
-
-<p>+1 Storage - 400 Robux</p>
-
-<p>2x Drop Chance - 350 Robux</p>
-
-<p>Faster Boats - 350 Robux</p>
+<p>⚡ Speed - 199 Robux</p>
 
 </div>
 
@@ -150,13 +228,28 @@ footer{
 
 <div class="kart">
 
-<h2>Steal A Brainrot</h2>
+<h2>⚔️ Blox Fruits</h2>
 
-<p>Admin Panel - 7500 Robux</p>
+<p>📦 +1 Storage - 400 Robux</p>
 
-<p>2x Server Boost - 249 Robux</p>
+<p>🍀 2x Drop Chance - 350 Robux</p>
 
-<p>Uçan Halı - 499 Robux</p>
+<p>🚤 Faster Boats - 350 Robux</p>
+
+</div>
+
+
+
+
+<div class="kart">
+
+<h2>🔥 Steal A Brainrot</h2>
+
+<p>👑 Admin Panel - 7500 Robux</p>
+
+<p>🚀 2x Server Boost - 249 Robux</p>
+
+<p>🧞 Uçan Halı - 499 Robux</p>
 
 </div>
 
@@ -165,9 +258,31 @@ footer{
 
 <footer>
 
-<p>RoGuide Beta Sürümü</p>
+<p>RoGuide v0.2.0 Beta</p>
+
+<p>Bu sayfa geliştirme aşamasındadır.</p>
 
 </footer>
+
+
+
+
+<script>
+
+
+window.onload=function(){
+
+setTimeout(function(){
+
+document.getElementById("loading").style.display="none";
+
+},2000);
+
+}
+
+
+</script>
+
 
 
 </body>
