@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,115 +11,172 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+*{
+    box-sizing:border-box;
+}
+
 body{
-    font-family:'Poppins',sans-serif;
-    background:#0b1220;
-    color:white;
     margin:0;
+    background:#080f1f;
+    color:white;
+    font-family:'Poppins',sans-serif;
     text-align:center;
 }
 
-header{
-    background:#0b1220;
-    padding:30px;
-    border-bottom:4px solid #2563eb;
+
+nav{
+    background:#111c33;
+    padding:15px;
 }
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+
+header{
+    padding:40px 20px;
+    background:linear-gradient(180deg,#2563eb,#080f1f);
+}
+
 
 .logo{
     width:180px;
-    display:block;
-    margin:auto;
 }
 
-header p{
-    font-size:18px;
-    color:#ddd;
+
+header h1{
+    font-size:35px;
 }
+
 
 .kart{
-    background:#172033;
-    margin:25px auto;
-    padding:25px;
+
+    background:#111c33;
     width:85%;
     max-width:550px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.35);
+    margin:25px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 20px #000;
+
 }
+
 
 .kart h2{
     color:#60a5fa;
 }
 
+
 button{
+
     background:#2563eb;
     color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:10px;
+    border:0;
+    padding:13px 25px;
+    border-radius:12px;
     cursor:pointer;
     font-size:16px;
+
 }
+
 
 button:hover{
+
     background:#1d4ed8;
+
 }
 
-a{
-    text-decoration:none;
-}
 
 footer{
+
     margin-top:40px;
-    padding:20px;
-    background:#080d18;
+    background:#050914;
+    padding:25px;
     color:#aaa;
+
 }
+
+
+.discord{
+
+    background:#5865F2;
+
+}
+
 
 </style>
 
 </head>
 
+
 <body>
+
+
+<nav>
+
+<a href="index.html">🏠 Ana Sayfa</a>
+
+<a href="robux.html">💰 Robux</a>
+
+<a href="gamepass.html">🎟️ Game Pass</a>
+
+</nav>
+
+
 
 <header>
 
-<img src="roguide.png" class="logo">
+<img src="roguide.jpg" class="logo">
 
-<p>Roblox Haberleri ve Önemli Bilgiler</p>
+<h1>RoGuide</h1>
+
+<p>Roblox Haber ve Rehber Merkezi</p>
 
 </header>
 
-    <div class="kart">
 
-<h2>Robux Fiyatları</h2>
+
+<div class="kart">
+
+<h2>💰 Robux Fiyatları</h2>
 
 <p>Güncel Robux paketlerini görüntüle.</p>
 
 <a href="robux.html">
-<button>Fiyatlara Bak</button>
+
+<button>Robux Fiyatları</button>
+
 </a>
 
 </div>
 
 
 
+
 <div class="kart">
 
-<h2>Game Pass Fiyatları</h2>
+<h2>🎟️ Game Pass Fiyatları</h2>
 
-<p>Popüler Roblox oyunlarının Game Pass fiyatlarını görüntüle.</p>
+<p>Popüler Roblox oyunlarının Game Pass fiyatları.</p>
 
 <a href="gamepass.html">
+
 <button>Game Passlere Bak</button>
+
 </a>
 
 </div>
 
 
 
+
 <div class="kart">
 
-<h2>Roblox Türkiye Durumu</h2>
+<h2>🇹🇷 Roblox Türkiye Durumu</h2>
 
 <p>Roblox'un Türkiye'de kapalı olduğu süre:</p>
 
@@ -130,11 +188,12 @@ footer{
 
 
 
+
 <div class="kart">
 
-<h2>Son Roblox Haberleri</h2>
+<h2>📰 Son Roblox Haberleri</h2>
 
-<p>Yeni güncellemeler ve önemli Roblox haberleri burada yayınlanacak.</p>
+<p>Yeni güncellemeler ve önemli haberler burada olacak.</p>
 
 <button>Yakında</button>
 
@@ -142,48 +201,37 @@ footer{
 
 
 
+
 <div class="kart">
 
-<h2>Güvenlik Uyarıları</h2>
+<h2>🔒 Güvenlik Uyarıları</h2>
 
-<p>Dolandırıcılık ve hesap güvenliği hakkında bilgiler.</p>
+<p>Dolandırıcılık ve hesap güvenliği bilgileri.</p>
 
 <button>Yakında</button>
 
 </div>
 
 
-    <footer>
 
 
 <footer>
 
 <p>Bu Bir Beta Sürümüdür. Hatalar Olabilir.</p>
 
-<p>Discord Sunucumuz</p>
+<a href="https://discord.gg/JV494qSqE">
 
-<input
-type="text"
-value="https://discord.gg/JV494qSqE"
-id="discordLink"
-readonly
-style="width:85%;max-width:350px;padding:10px;border-radius:8px;border:none;text-align:center;"
->
+<button class="discord">
+Discord'a Katıl
+</button>
 
-<br><br>
-
-<button onclick="kopyalaDiscord()">Kopyala</button>
+</a>
 
 </footer>
-</footer>
 
-function kopyalaDiscord() {
-    const kutu = document.getElementById("discordLink");
-    kutu.select();
-    kutu.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(kutu.value);
-    alert("Discord bağlantısı kopyalandı!");
-}
+
+
+
 <script>
 
 const baslangicTarihi = new Date("2024-08-07");
@@ -192,14 +240,17 @@ const bugun = new Date();
 
 const fark = bugun - baslangicTarihi;
 
-const gun = Math.floor(fark / (1000 * 60 * 60 * 24));
+const gun = Math.floor(
+fark / (1000*60*60*24)
+);
+
 
 document.getElementById("gunSayisi").innerHTML = gun;
+
 
 </script>
 
 
+
 </body>
 </html>
-
-
