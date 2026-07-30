@@ -12,59 +12,77 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background:#0b1220;
-    color:white;
-    text-align:center;
+body{
     margin:0;
+    background:#080f1f;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    text-align:center;
 }
 
-header {
-    background:#2563eb;
-    padding:25px;
+
+nav{
+    background:#111c33;
+    padding:15px;
 }
 
-.logo {
-    width:150px;
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
 }
 
-.kart {
-    background:#172033;
-    margin:25px auto;
-    padding:25px;
+
+header{
+    padding:30px;
+    background:linear-gradient(180deg,#2563eb,#080f1f);
+}
+
+
+.logo{
+    width:160px;
+}
+
+
+.kart{
+
+    background:#111c33;
     width:85%;
     max-width:500px;
-    border-radius:18px;
-    box-shadow:0 5px 20px #0005;
+    margin:25px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 20px #000;
+
 }
 
-h1 {
-    color:white;
-}
 
-h2 {
+.kart h2{
     color:#60a5fa;
 }
 
-button {
+
+button{
+
     background:#2563eb;
     color:white;
-    border:none;
+    border:0;
     padding:12px 25px;
     border-radius:10px;
     cursor:pointer;
+
 }
 
-a {
-    text-decoration:none;
-}
 
-footer {
+footer{
+
     margin-top:40px;
+    background:#050914;
     padding:20px;
-    background:#080d18;
     color:#aaa;
+
 }
 
 </style>
@@ -75,15 +93,28 @@ footer {
 <body>
 
 
+<nav>
+
+<a href="index.html">🏠 Ana Sayfa</a>
+
+<a href="robux.html">💰 Robux</a>
+
+<a href="gamepass.html">🎟️ Game Pass</a>
+
+</nav>
+
+
+
 <header>
 
-<img src="roguide.png" class="logo">
+<img src="roguide.jpg" class="logo">
 
-<h1>Game Pass Fiyatları</h1>
+<h1>🎟️ Game Pass Fiyatları</h1>
 
 <p>Popüler Roblox oyunlarının Game Pass değerleri</p>
 
 </header>
+
 
 
 
@@ -132,18 +163,9 @@ footer {
 
 
 
-<a href="index.html">
-
-<button>Ana Sayfaya Dön</button>
-
-</a>
-
-
-
-
 <footer>
 
-RoGuide Beta Sürümü
+<p>RoGuide Beta Sürümü</p>
 
 </footer>
 
