@@ -1,108 +1,201 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RoGuide - Roblox Haber Merkezi</title>
 
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+
 *{
-    box-sizing:border-box;
+box-sizing:border-box;
 }
 
+
 body{
-    margin:0;
-    background:#080f1f;
-    color:white;
-    font-family:'Poppins',sans-serif;
-    text-align:center;
+
+margin:0;
+background:#080f1f;
+color:white;
+font-family:'Poppins',sans-serif;
+text-align:center;
+
 }
+
+
+/* Loading */
+
+#loading{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#080f1f;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+
+}
+
+
+.loader{
+
+width:55px;
+height:55px;
+border:5px solid #26334f;
+border-top:5px solid #2563eb;
+border-radius:50%;
+animation:dondur 1s linear infinite;
+
+}
+
+
+@keyframes dondur{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+
+
+/* Menü */
 
 
 nav{
-    background:#111c33;
-    padding:15px;
+
+background:#111c33;
+padding:18px;
+position:sticky;
+top:0;
+
 }
 
+
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:10px;
-    font-weight:bold;
+
+color:white;
+text-decoration:none;
+margin:8px;
+font-weight:600;
+font-size:14px;
+
 }
+
+
+
+/* Header */
 
 
 header{
-    padding:40px 20px;
-    background:linear-gradient(180deg,#2563eb,#080f1f);
+
+padding:40px 20px;
+background:linear-gradient(180deg,#2563eb,#080f1f);
+
 }
 
 
 .logo{
-    width:180px;
+
+width:180px;
+border-radius:20px;
+
 }
 
 
-header h1{
-    font-size:35px;
+.badge{
+
+display:inline-block;
+background:#2563eb;
+padding:6px 15px;
+border-radius:20px;
+font-size:14px;
+margin-top:10px;
+
 }
+
+
+
+/* Kartlar */
 
 
 .kart{
 
-    background:#111c33;
-    width:85%;
-    max-width:550px;
-    margin:25px auto;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 0 20px #000;
+background:#111c33;
+width:85%;
+max-width:550px;
+margin:25px auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px #0008;
+transition:.3s;
+
+}
+
+
+.kart:hover{
+
+transform:translateY(-5px);
 
 }
 
 
 .kart h2{
-    color:#60a5fa;
+
+color:#60a5fa;
+
 }
+
+
+
+/* Buton */
 
 
 button{
 
-    background:#2563eb;
-    color:white;
-    border:0;
-    padding:13px 25px;
-    border-radius:12px;
-    cursor:pointer;
-    font-size:16px;
+background:#2563eb;
+color:white;
+border:none;
+padding:13px 25px;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
 
 }
 
 
 button:hover{
 
-    background:#1d4ed8;
-
-}
-
-
-footer{
-
-    margin-top:40px;
-    background:#050914;
-    padding:25px;
-    color:#aaa;
+background:#1d4ed8;
 
 }
 
 
 .discord{
 
-    background:#5865F2;
+background:#5865F2;
+
+}
+
+
+
+footer{
+
+margin-top:40px;
+background:#050914;
+padding:25px;
+color:#aaa;
 
 }
 
@@ -115,13 +208,26 @@ footer{
 <body>
 
 
-<nav>
+<div id="loading">
+
+<img src="roguide.jpg" width="120">
+<h2>Loading...</h2>
+
+<div class="loader"></div>
+
+<p>RoGuide v0.2.0 Beta</p>
+
+</div>
+
+    <nav>
 
 <a href="index.html">🏠 Ana Sayfa</a>
 
 <a href="robux.html">💰 Robux</a>
 
 <a href="gamepass.html">🎟️ Game Pass</a>
+
+<a href="haftanin-oyunlari.html">🎮 Haftanın Oyunları</a>
 
 </nav>
 
@@ -135,7 +241,10 @@ footer{
 
 <p>Roblox Haber ve Rehber Merkezi</p>
 
+<span class="badge">v0.2.0 BETA</span>
+
 </header>
+
 
 
 
@@ -143,7 +252,7 @@ footer{
 
 <h2>💰 Robux Fiyatları</h2>
 
-<p>Güncel Robux paketlerini görüntüle.</p>
+<p>Robux paketlerini ve fiyat bilgilerini görüntüle.</p>
 
 <a href="robux.html">
 
@@ -160,11 +269,28 @@ footer{
 
 <h2>🎟️ Game Pass Fiyatları</h2>
 
-<p>Popüler Roblox oyunlarının Game Pass fiyatları.</p>
+<p>Popüler Roblox oyunlarının Game Pass değerleri.</p>
 
 <a href="gamepass.html">
 
 <button>Game Passlere Bak</button>
+
+</a>
+
+</div>
+
+
+
+
+<div class="kart">
+
+<h2>🎮 Haftanın Oyunları</h2>
+
+<p>Bu haftanın popüler Roblox oyunlarını keşfet.</p>
+
+<a href="haftanin-oyunlari.html">
+
+<button>Oyunlara Bak</button>
 
 </a>
 
@@ -192,7 +318,7 @@ footer{
 
 <h2>📰 Son Roblox Haberleri</h2>
 
-<p>Yeni güncellemeler ve önemli haberler burada olacak.</p>
+<p>Yeni güncellemeler, duyurular ve önemli haberler burada yayınlanacak.</p>
 
 <button>Yakında</button>
 
@@ -205,33 +331,51 @@ footer{
 
 <h2>🔒 Güvenlik Uyarıları</h2>
 
-<p>Dolandırıcılık ve hesap güvenliği bilgileri.</p>
+<p>Dolandırıcılık ve hesap güvenliği hakkında bilgiler.</p>
 
 <button>Yakında</button>
 
 </div>
 
+    <footer>
 
+<p>RoGuide v0.2.0 Beta</p>
 
+<p>Bu site geliştirme aşamasındadır. Hatalar olabilir.</p>
 
-<footer>
-
-<p>Bu Bir Beta Sürümüdür. Hatalar Olabilir.</p>
 
 <a href="https://discord.gg/JV494qSqE">
 
 <button class="discord">
-Discord'a Katıl
+💬 Discord'a Katıl
 </button>
 
 </a>
+
 
 </footer>
 
 
 
-
 <script>
+
+
+// Loading ekranı
+
+window.onload=function(){
+
+setTimeout(function(){
+
+document.getElementById("loading").style.display="none";
+
+},2000);
+
+}
+
+
+
+// Roblox Türkiye sayaç
+
 
 const baslangicTarihi = new Date("2024-08-07");
 
@@ -239,12 +383,16 @@ const bugun = new Date();
 
 const fark = bugun - baslangicTarihi;
 
+
 const gun = Math.floor(
+
 fark / (1000*60*60*24)
+
 );
 
 
 document.getElementById("gunSayisi").innerHTML = gun;
+
 
 
 </script>
@@ -252,4 +400,7 @@ document.getElementById("gunSayisi").innerHTML = gun;
 
 
 </body>
+
 </html>
+
+    
