@@ -1,45 +1,169 @@
-<div class="kart">
-    <h2>Robux Fiyatları</h2>
+<!DOCTYPE html>
+<html lang="tr">
 
-    <p id="fiyat80"></p>
-    <p id="fiyat100"></p>
-    <p id="fiyat400"></p>
-    <p id="fiyat1000"></p>
-    <p id="fiyat2000"></p>
-    <p id="fiyat5000"></p>
-    <p id="fiyat10000"></p>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RoGuide - Robux Fiyatları</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body{
+    margin:0;
+    background:#080f1f;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+}
+
+nav{
+    background:#111c33;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+header{
+    padding:30px;
+    background:linear-gradient(180deg,#2563eb,#080f1f);
+}
+
+.logo{
+    width:160px;
+}
+
+.kart{
+    background:#111c33;
+    width:85%;
+    max-width:500px;
+    margin:25px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 20px #000;
+}
+
+.kart h2{
+    color:#60a5fa;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:0;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+footer{
+    margin-top:40px;
+    background:#050914;
+    padding:20px;
+    color:#aaa;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<a href="index.html">🏠 Ana Sayfa</a>
+<a href="robux.html">💰 Robux</a>
+<a href="gamepass.html">🎟️ Game Pass</a>
+
+</nav>
+
+
+<header>
+
+<img src="roguide.jpg" class="logo">
+
+<h1>💰 Robux Fiyatları</h1>
+
+<p>Güncel Robux paketleri</p>
+
+</header>
+
+
+
+<div class="kart">
+
+<h2>100 Robux</h2>
+<p>0.99 Dolar</p>
 
 </div>
 
 
-<script>
+<div class="kart">
 
-const robuxTL = 1.50;
-const dolarKuru = 40;
+<h2>400 Robux</h2>
+<p>4.99 Dolar</p>
 
-
-function hesapla(robux) {
-
-    let tl = robux * robuxTL;
-    let dolar = tl / dolarKuru;
-
-    return `
-    <strong>${robux} Robux</strong><br>
-    ${tl.toFixed(2)} TL<br>
-    ${dolar.toFixed(2)} Dolar
-    <hr>
-    `;
-
-}
+</div>
 
 
-document.getElementById("fiyat80").innerHTML = hesapla(80);
-document.getElementById("fiyat100").innerHTML = hesapla(100);
-document.getElementById("fiyat400").innerHTML = hesapla(400);
-document.getElementById("fiyat1000").innerHTML = hesapla(1000);
-document.getElementById("fiyat2000").innerHTML = hesapla(2000);
-document.getElementById("fiyat5000").innerHTML = hesapla(5000);
-document.getElementById("fiyat10000").innerHTML = hesapla(10000);
+<div class="kart">
 
-</script>
+<h2>800 Robux</h2>
+<p>9.99 Dolar</p>
 
+</div>
+
+
+<div class="kart">
+
+<h2>1000 Robux</h2>
+<p>14.99 Dolar</p>
+
+</div>
+
+
+<div class="kart">
+
+<h2>2000 Robux</h2>
+<p>29.99 Dolar</p>
+
+</div>
+
+
+<div class="kart">
+
+<h2>5000 Robux</h2>
+<p>74.99 Dolar</p>
+
+</div>
+
+
+<div class="kart">
+
+<h2>10000 Robux</h2>
+<p>149.99 Dolar</p>
+
+</div>
+
+
+
+<footer>
+
+<p>RoGuide Beta Sürümü</p>
+
+</footer>
+
+
+</body>
+
+</html>
