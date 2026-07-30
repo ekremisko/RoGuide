@@ -1,88 +1,206 @@
-<div class="kart">
+<!DOCTYPE html>
+<html lang="tr">
 
-<h2>🥇 Brookhaven</h2>
-<p>⭐ Popülerlik: Çok Yüksek</p>
-<p>🎭 Rol yapma ve sosyal deneyim oyunu.</p>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RoGuide - Haftanın Oyunları</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+background:#080f1f;
+color:white;
+font-family:'Poppins',sans-serif;
+text-align:center;
+}
+
+
+#loading{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#080f1f;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+
+}
+
+
+.loader{
+
+width:55px;
+height:55px;
+border:5px solid #26334f;
+border-top:5px solid #2563eb;
+border-radius:50%;
+animation:dondur 1s linear infinite;
+
+}
+
+
+@keyframes dondur{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+
+nav{
+
+background:#111c33;
+padding:18px;
+position:sticky;
+top:0;
+
+}
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin:8px;
+font-weight:600;
+font-size:14px;
+
+}
+
+
+
+header{
+
+padding:35px 20px;
+background:linear-gradient(180deg,#2563eb,#080f1f);
+
+}
+
+
+.logo{
+
+width:160px;
+border-radius:20px;
+
+}
+
+
+.badge{
+
+display:inline-block;
+background:#2563eb;
+padding:6px 15px;
+border-radius:20px;
+
+}
+
+
+
+.kart{
+
+background:#111c33;
+width:85%;
+max-width:550px;
+margin:25px auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px #0008;
+transition:.3s;
+
+}
+
+
+.kart:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+.kart h2{
+
+color:#60a5fa;
+
+}
+
+
+
+footer{
+
+margin-top:40px;
+background:#050914;
+padding:25px;
+color:#aaa;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="loading">
+
+<img src="roguide.jpg" width="120">
+
+<h2>Loading...</h2>
+
+<div class="loader"></div>
+
+<p>RoGuide v0.2.0 Beta</p>
 
 </div>
 
 
-<div class="kart">
 
-<h2>🥈 Blox Fruits</h2>
-<p>⭐ Popülerlik: Çok Yüksek</p>
-<p>⚔️ Savaş, macera ve güç geliştirme oyunu.</p>
+<nav>
 
-</div>
+<a href="index.html">🏠 Ana Sayfa</a>
 
+<a href="robux.html">💰 Robux</a>
 
-<div class="kart">
+<a href="gamepass.html">🎟️ Game Pass</a>
 
-<h2>🥉 Steal A Brainrot</h2>
-<p>⭐ Popülerlik: Yükselen</p>
-<p>🔥 Son dönemlerde dikkat çeken oyunlardan.</p>
+<a href="haftanin-oyunlari.html">🎮 Haftanın Oyunları</a>
 
-</div>
+</nav>
 
 
-<div class="kart">
-
-<h2>4️⃣ Adopt Me!</h2>
-<p>⭐ Popülerlik: Yüksek</p>
-<p>🐶 Evcil hayvan, ticaret ve sosyal oyun.</p>
-
-</div>
 
 
-<div class="kart">
+<header>
 
-<h2>5️⃣ Tower of Hell</h2>
-<p>⭐ Popülerlik: Yüksek</p>
-<p>🏃 Zorlu parkur ve beceri oyunu.</p>
+<img src="roguide.jpg" class="logo">
 
-</div>
+<h1>🎮 Haftanın Oyunları</h1>
 
+<p>Bu haftanın popüler Roblox oyunları</p>
 
-<div class="kart">
+<span class="badge">v0.2.0 BETA</span>
 
-<h2>6️⃣ Murder Mystery 2</h2>
-<p>⭐ Popülerlik: Yüksek</p>
-<p>🔎 Gizem, kaçış ve dedektif tarzı oyun.</p>
-
-</div>
+</header>
 
 
-<div class="kart">
-
-<h2>7️⃣ BedWars</h2>
-<p>⭐ Popülerlik: Yüksek</p>
-<p>⚔️ Takım savaşları ve strateji oyunu.</p>
-
-</div>
 
 
-<div class="kart">
 
-<h2>8️⃣ Arsenal</h2>
-<p>⭐ Popülerlik: Yüksek</p>
-<p>🔫 Hızlı rekabetçi FPS deneyimi.</p>
-
-</div>
-
-
-<div class="kart">
-
-<h2>9️⃣ Doors</h2>
-<p>⭐ Popülerlik: Yüksek</p>
-<p>👁️ Korku ve keşif macerası.</p>
-
-</div>
-
-
-<div class="kart">
-
-<h2>🔟 Piggy</h2>
-<p>⭐ Popülerlik: Klasik</p>
-<p>🐷 Hikaye tabanlı korku ve kaçış oyunu.</p>
-
-</div>
+<div class="
