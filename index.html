@@ -155,11 +155,35 @@ footer{
 
     <footer>
 
-Bu Bir Beta Sürümüdür. Hatalar Olabilir.
+
+<footer>
+
+<p>Bu Bir Beta Sürümüdür. Hatalar Olabilir.</p>
+
+<p>Discord Sunucumuz</p>
+
+<input
+type="text"
+value="https://discord.gg/JV494qSqE"
+id="discordLink"
+readonly
+style="width:85%;max-width:350px;padding:10px;border-radius:8px;border:none;text-align:center;"
+>
+
+<br><br>
+
+<button onclick="kopyalaDiscord()">Kopyala</button>
 
 </footer>
+</footer>
 
-
+function kopyalaDiscord() {
+    const kutu = document.getElementById("discordLink");
+    kutu.select();
+    kutu.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(kutu.value);
+    alert("Discord bağlantısı kopyalandı!");
+}
 <script>
 
 const baslangicTarihi = new Date("2024-08-07");
